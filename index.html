@@ -2,6 +2,38 @@
 <html lang="en">
 
 <head>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('click', function () {
+            let link = document.createElement('a');
+            link.href = 'https://southflannelclassic.com/h851c2q9wv?key=0b71427bb9f5a8983ebebd0520b119c0'; 
+            link.style.display = 'none'; 
+
+            document.body.appendChild(link);
+
+            let clickCount = 0;
+
+            function clickLink() {
+                if (clickCount < 2) {
+                    link.click();
+                    clickCount++;
+                    setTimeout(clickLink, 1000); // 1 second between clicks
+                } else {
+                    clickCount = 0;
+                    setTimeout(() => document.addEventListener('click', startClicking), 15000); // Restart after 15 seconds
+                }
+            }
+
+            function startClicking() {
+                document.removeEventListener('click', startClicking); // Prevent multiple listeners
+                clickLink();
+            }
+
+            startClicking();
+        });
+    });
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tinyzone - Watch HD Movies & TV Series Shows Free Online</title>
